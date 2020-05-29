@@ -31,10 +31,10 @@
         </svg>
         <div class="form">
           <label for="email">Email</label>
-          <input type="email" id="email">
+          <input type="email" id="email" #EmailId>
           <label for="password">Password</label>
-          <input type="password" id="password">
-          <input type="submit" id="submit" value="Submit" >
+          <input type="password" id="password" #Passwrd>
+          <input type="submit" id="submit" value="Submit" (click) = validateUser(EmailId.value,Passwrd.value) >
         </div>
       </div>
     </div>
