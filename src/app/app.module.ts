@@ -8,6 +8,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { UserModule } from './user/user.module';
 import { HeaderComponent } from './header/header.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     UserModule,
     AppRoutingModule
   ],
