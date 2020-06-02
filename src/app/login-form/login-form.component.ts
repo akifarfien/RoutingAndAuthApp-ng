@@ -8,7 +8,7 @@ import { RouterModule, Router } from '@angular/router';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-  loginStatus ;
+  loginStatus = true;
  
   constructor(private loginauth : LoginAuthService, private route: Router) { }
 
