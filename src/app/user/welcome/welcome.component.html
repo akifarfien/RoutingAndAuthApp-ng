@@ -1,6 +1,7 @@
 <section class="container">
     
-    <div class="row active-with-click">
+    <div class="row">
+     
         <div class="col-md-4 col-sm-6 col-xs-12">
             <div *ngFor ='let resp of respData'>
             <article class="material-card Red">
@@ -17,29 +18,25 @@
                     <div class="img-container">
                         <img class="img-responsive" src={{resp.image}}>
                     </div>
-                    <div class="mc-description">
-                        He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
-                    </div>
-                </div>
-                <a class="mc-btn-action" id="sideIcon">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <div class="mc-footer">
-                    <h4>
-                        Social
-                    </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
                 </div>
             </article>
         </div>
-        </div>
     </div>
+    </div>
+<div class="row col-md-8">
+    <div *ngIf="hasPrevious">
+        <button class="btn btn-secondary btn-sm pevcls" (click)="previous()">Back</button>
+   </div>
 
+    <div *ngIf="hasNext">
+         <button class="btn btn-secondary btn-sm nxtcls" (click)="next()"> Next</button>
+    </div>
+</div>
 </section>
 
+
+
+<!-- 
 <script type="text/javascript">
     $(function() {
         $('.material-card > .mc-btn-action').click(function () {
@@ -70,4 +67,4 @@
             }
         });
     });
-</script>
+</script> -->

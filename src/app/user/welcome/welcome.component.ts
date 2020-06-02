@@ -8,6 +8,9 @@ import { ApiServiceService } from 'src/app/service/api-service.service';
 })
 export class WelcomeComponent implements OnInit {
    respData = [];
+   hasNext = '';
+   hasPrevious = '';
+
   constructor(private apiservice:ApiServiceService) { }
 
   ngOnInit(): void {
@@ -16,12 +19,32 @@ export class WelcomeComponent implements OnInit {
 
    getDataFromApi(){
     this.apiservice.getData().subscribe( (response : any) => {
+      this.hasNext = response.info.next;
+      this.hasPrevious = response.info.prev;
      this.respData = [...response.results];
-     console.log(this.respData);
     })
-  
   }
 
+  next(){
+    if(!(this.hasNext === null)){
+    this.apiservice.getNext(this.hasNext).subscribe( (response : any) => {
+      console.log(response);
+      this.hasNext = response.info.next;
+      this.hasPrevious = response.info.prev;
+     this.respData = [...response.results];
+    })
+    }
+  }
   
+  previous(){
+    if(!(this.hasPrevious === null)){
+      this.apiservice.getNext(this.hasPrevious).subscribe( (response : any) => {
+        console.log(response);
+        this.hasNext = response.info.next;
+        this.hasPrevious = response.info.prev;
+        this.respData = [...response.results];
+      })
+      }
+  }
 
 }

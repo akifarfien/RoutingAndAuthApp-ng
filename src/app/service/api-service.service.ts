@@ -18,4 +18,14 @@ export class ApiServiceService {
     const dataValue = this.http.get(`https://rickandmortyapi.com/api/character/${id}`);
     return dataValue;
   }
+
+  getNext(nextUrl){
+    const dataValue = this.http.get(nextUrl);
+    return dataValue;
+  }
+
+  getPrev(previousUrl){
+    const dataValue = this.http.get(previousUrl);
+    return dataValue;
+  }
 }

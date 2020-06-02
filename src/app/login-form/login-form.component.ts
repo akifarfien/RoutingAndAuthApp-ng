@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginAuthService } from '../service/login-auth.service';
 import { RouterModule, Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -23,4 +24,10 @@ export class LoginFormComponent implements OnInit {
    else this.route.navigate(['/login']);
   
   }
+ 
+get loginStatusVal(){
+  return this.loginStatus;
+}
+
+  
 }

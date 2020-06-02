@@ -1248,3 +1248,12 @@ h2,
 h3 {
   font-weight: 200;
 }
+
+.nxtcls{
+    float: right;
+}
+
+.pevcls{
+    float: left;
+    margin-right: 170px;
+}
