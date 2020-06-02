@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+.btncls{
+    padding: 15px;
+    float: right;
+    line-height: 10em;
+    margin-left: 67px;
+
+}
+
+.pageheder{
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.pageheder .innerheader{
+    padding: 5px;
+    font-family: 'Architects Daughter', cursive;
+    letter-spacing: 11px;
+    word-spacing: 19px;
+    padding-left: 70px;
+}

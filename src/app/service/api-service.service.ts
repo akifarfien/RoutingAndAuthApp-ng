@@ -13,4 +13,9 @@ export class ApiServiceService {
     const dataValue = this.http.get(`https://rickandmortyapi.com/api/character`);
     return dataValue;
   }
+
+  getOneId(id:number){
+    const dataValue = this.http.get(`https://rickandmortyapi.com/api/character/${id}`);
+    return dataValue;
+  }
 }
