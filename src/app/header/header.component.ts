@@ -10,16 +10,20 @@ import { LoginAuthService } from '../service/login-auth.service';
 })
 export class HeaderComponent implements OnInit {
 
+
   constructor(private route: Router, private service : LoginAuthService) { }
 
   ngOnInit(): void {
+
   }
+ 
+
+
   logout() {
     
     if(LoginAuthService.loginFlag){
-      console.log("logout se phele "+ LoginAuthService.loginFlag);
+     
       LoginAuthService.loginFlag = false;
-      console.log("logout"+ LoginAuthService.loginFlag);
       return this.route.navigate(['/login']);
 
     }

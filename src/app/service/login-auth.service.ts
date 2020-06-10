@@ -14,6 +14,7 @@ passwrd = '12345';
 validateUser(name, password){
 if(this.userName === name && this.passwrd === password) {
   LoginAuthService.loginFlag = true;
+  console.log("lgin se " +  LoginAuthService.loginFlag);
   return true;
 }
 else return false;

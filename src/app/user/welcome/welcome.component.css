@@ -1255,5 +1255,18 @@ h3 {
 
 .pevcls{
     float: left;
-    margin-right: 170px;
+    margin-right: 300px;
+    
+}
+
+ul.nav li a, ul.nav li a:visited {
+  color: green !important;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+  color: green !important;
+}
+
+ a {
+  color: yellowgreen !important;
 }

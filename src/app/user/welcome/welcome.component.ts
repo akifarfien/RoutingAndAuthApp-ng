@@ -38,7 +38,7 @@ export class WelcomeComponent implements OnInit {
   
   previous(){
     if(!(this.hasPrevious === null)){
-      this.apiservice.getNext(this.hasPrevious).subscribe( (response : any) => {
+      this.apiservice.getPrev(this.hasPrevious).subscribe( (response : any) => {
         console.log(response);
         this.hasNext = response.info.next;
         this.hasPrevious = response.info.prev;

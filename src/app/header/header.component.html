@@ -15,15 +15,16 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link active" routerLink='welcome'>Home</a>
-                    <a  class="nav-item nav-link">About</a>
-                    <a  class="nav-item nav-link">Products</a>
+                    <a  class="nav-item nav-link" routerLink='about'>About</a>
                 </div>
                 <form class="form-inline ml-auto extracls">
                     <input type="text" class="form-control mr-sm-2" placeholder="Search">
                     <button type="submit" class="btn btn-outline-light">Search</button>
                 </form>
+                
                 <button class="btn btn-outline-light btn-sm" (click)="logout()">Log Out</button>
             </div>
+        
         </nav>
     </div>
     
