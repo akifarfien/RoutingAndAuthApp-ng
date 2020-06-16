@@ -10,24 +10,29 @@ import { LoginAuthService } from '../service/login-auth.service';
 })
 export class HeaderComponent implements OnInit {
 
-
-  constructor(private route: Router, private service : LoginAuthService) { }
+btnstst: Boolean ;
+  constructor(private route: Router, private service: LoginAuthService) { }
 
   ngOnInit(): void {
-
+    this.service.loginFlag$.subscribe(flg => {
+      this.btnstst = flg;
+      console.log("header init "+ this.btnstst );
+    })
   }
- 
+
 
 
   logout() {
-    
-    if(LoginAuthService.loginFlag){
-     
-      LoginAuthService.loginFlag = false;
+
+    if (this.btnstst) {
+      this.service.setloginFlagSource(false);
+      this.btnstst = this.service.getloginFlagSource();
+      console.log("header logout "+ this.btnstst );
+
       return this.route.navigate(['/login']);
 
     }
-  
+
 
   }
 

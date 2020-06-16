@@ -22,7 +22,10 @@
                     <button type="submit" class="btn btn-outline-light">Search</button>
                 </form>
                 
-                <button class="btn btn-outline-light btn-sm" (click)="logout()">Log Out</button>
+                <div  *ngIf="btnstst" >
+                    <button class="btn btn-outline-light btn-sm" (click)="logout()">Log Out</button>
+
+                </div>
             </div>
         
         </nav>
