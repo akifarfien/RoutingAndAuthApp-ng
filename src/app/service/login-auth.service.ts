@@ -32,6 +32,7 @@ export class LoginAuthService {
   validateUser(name, password) {
     if (this.userName === name && this.passwrd === password) {
       this.setloginFlagSource(true);
+      localStorage.setItem("loginFlg",'true');
       // LoginAuthService.loginFlag = true;
       return true;
     }
