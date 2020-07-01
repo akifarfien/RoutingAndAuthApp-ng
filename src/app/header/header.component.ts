@@ -10,8 +10,8 @@ import { LoginAuthService } from '../service/login-auth.service';
 })
 export class HeaderComponent implements OnInit {
 
-btnstst  = JSON.parse( localStorage.getItem("loginFlg")  || 'false');
-
+btnstst : Boolean = false
+ 
   constructor(private route: Router, private service: LoginAuthService, private cd : ChangeDetectorRef) { }
   
 
@@ -19,8 +19,8 @@ btnstst  = JSON.parse( localStorage.getItem("loginFlg")  || 'false');
 
     // this is about share data btw two components.
     this.service.loginFlag$.subscribe(flg => {
-      // this.btnstst = flg;
-      
+       this.btnstst = flg;
+       this.cd.markForCheck();
     })
   }
 
